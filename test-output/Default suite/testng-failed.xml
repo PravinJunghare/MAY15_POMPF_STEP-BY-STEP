@@ -5,11 +5,9 @@
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
-          <include name="verifyLoginPageTilteTest"/>
+          <include name="verifyLoginUrlTest"/>
           <include name="setup"/>
-          <include name="forgotPasswordlinkExistTest"/>
           <include name="tearDown"/>
-          <include name="dologinTest"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </classes>

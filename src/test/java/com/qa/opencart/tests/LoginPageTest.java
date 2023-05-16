@@ -37,7 +37,12 @@ public class LoginPageTest extends BaseTest
 	@Test(priority = 4)
 	public void dologinTest()
 	{
-		loginPage.doLogin("pravinjunghare01@gmail.com", "Test@12345");
+		accPage=loginPage.doLogin("pravinjunghare01@gmail.com", "Test@12345");
+		Assert.assertTrue(accPage.isLogoutLinkExists());
+		
+		// after login we are moving to account page so accPage where we can store
+		//to verify login is successful or not we have asserted logoutlinkis exist or not.
+		
 	}
 	
 	
