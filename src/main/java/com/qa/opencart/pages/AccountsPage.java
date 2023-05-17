@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.ElementUtil;
 
 public class AccountsPage {
@@ -27,20 +28,22 @@ public class AccountsPage {
 	// 3 Page action
 	public String getAccountsPageTile() {
 		// String accPageTile = driver.getTitle();
-		String accPageTitle = eleUtil.waitForTitleContainsAndFetch(10, "My Account");
+		String accPageTitle = eleUtil.waitForTitleContainsAndFetch(AppConstants.DEFAULT_MEDIUM_TIMEOUT,
+				AppConstants.ACCOUNT_PAGE_TITLE_VALUE);
 		System.out.println("Acc page Tile:" + accPageTitle);
 		return accPageTitle;
 	}
 
 	public String getAccountsUrl() {
 		String accPageUrl = driver.getCurrentUrl();
-		System.out.println("Acc page Tile:" + accPageUrl);
+		// String url = eleUtil.waitForURLIsAndFetch(AppConstants.DEFAULT_SHORT_TIMEOUT,
+		// AppConstants.ACCOUNT_PAGE_URL_FRICTION_VALUE);
 		return accPageUrl;
 	}
 
 	public boolean isLogoutLinkExists() {
 		// return driver.findElement(logoutlink).isDisplayed();
-		return eleUtil.waitForElementVisible(logoutlink, 10).isDisplayed();
+		return eleUtil.waitForElementVisible(logoutlink, AppConstants.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 	}
 
 	public List<String> getAccountsPageHeaderList() {
