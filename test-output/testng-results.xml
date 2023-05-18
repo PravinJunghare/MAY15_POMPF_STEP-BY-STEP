@@ -2,40 +2,36 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-17T15:35:04 IST" name="Default suite" finished-at="2023-05-17T15:35:22 IST" duration-ms="18321">
+  <suite started-at="2023-05-18T17:03:32 IST" name="Default suite" finished-at="2023-05-18T17:03:59 IST" duration-ms="27693">
     <groups>
     </groups>
-    <test started-at="2023-05-17T15:35:04 IST" name="Default test" finished-at="2023-05-17T15:35:22 IST" duration-ms="18321">
-      <class name="com.qa.opencart.tests.AccountsPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:04 IST" name="setup" finished-at="2023-05-17T15:35:19 IST" duration-ms="14780" status="PASS">
+    <test started-at="2023-05-18T17:03:32 IST" name="Default test" finished-at="2023-05-18T17:03:59 IST" duration-ms="27693">
+      <class name="com.qa.opencart.tests.LoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:32 IST" name="setup" finished-at="2023-05-18T17:03:48 IST" duration-ms="16025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="accountPageSetup()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:19 IST" name="accountPageSetup" finished-at="2023-05-17T15:35:20 IST" duration-ms="1352" status="PASS">
+        <test-method signature="verifyLoginPageTilteTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:48 IST" name="verifyLoginPageTilteTest" finished-at="2023-05-18T17:03:48 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accountPageSetup -->
-        <test-method signature="verifyAccountsPageTilteTest()[pri:1, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:20 IST" name="verifyAccountsPageTilteTest" finished-at="2023-05-17T15:35:21 IST" duration-ms="138" status="PASS">
+        </test-method> <!-- verifyLoginPageTilteTest -->
+        <test-method signature="verifyLoginUrlTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:48 IST" name="verifyLoginUrlTest" finished-at="2023-05-18T17:03:48 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountsPageTilteTest -->
-        <test-method signature="verifyAccountUrlTest()[pri:2, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:21 IST" name="verifyAccountUrlTest" finished-at="2023-05-17T15:35:21 IST" duration-ms="26" status="PASS">
+        </test-method> <!-- verifyLoginUrlTest -->
+        <test-method signature="forgotPasswordlinkExistTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:48 IST" name="forgotPasswordlinkExistTest" finished-at="2023-05-18T17:03:49 IST" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountUrlTest -->
-        <test-method signature="logoutlinkExistTest()[pri:3, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:21 IST" name="logoutlinkExistTest" finished-at="2023-05-17T15:35:21 IST" duration-ms="199" status="PASS">
+        </test-method> <!-- forgotPasswordlinkExistTest -->
+        <test-method signature="dologinTest()[pri:4, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:49 IST" name="dologinTest" finished-at="2023-05-18T17:03:58 IST" duration-ms="9623" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutlinkExistTest -->
-        <test-method signature="accountHeaderTest()[pri:4, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:21 IST" name="accountHeaderTest" finished-at="2023-05-17T15:35:21 IST" duration-ms="150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountHeaderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4e2916c3]" started-at="2023-05-17T15:35:21 IST" name="tearDown" finished-at="2023-05-17T15:35:22 IST" duration-ms="1250" status="PASS">
+        </test-method> <!-- dologinTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@6fd1660]" started-at="2023-05-18T17:03:58 IST" name="tearDown" finished-at="2023-05-18T17:03:59 IST" duration-ms="1276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
+      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

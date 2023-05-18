@@ -13,7 +13,7 @@ public class AccountsPageTest extends BaseTest {
 
 	@BeforeClass
 	public void accountPageSetup() {
-		accPage = loginPage.doLogin("pravinjunghare01@gmail.com", "Test@12345");
+		accPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 	}
 
 	@Test(priority = 1)
@@ -32,12 +32,21 @@ public class AccountsPageTest extends BaseTest {
 	public void logoutlinkExistTest() {
 		Assert.assertTrue(accPage.isLogoutLinkExists());
 	}
-	
+
 	@Test(priority = 4)
-	public void accountHeaderTest() {
-		List<String> actualAccPageHeaderList=accPage.getAccountsPageHeaderList();
-		Assert.assertEquals(actualAccPageHeaderList.size(), 4);
-		
+	public void accountHeaderCountTest() {
+		List<String> actualAccPageHeaderList = accPage.getAccountsPageHeaderList();
+		System.out.println("Account Page Headerlist" + actualAccPageHeaderList);
+		Assert.assertEquals(actualAccPageHeaderList.size(), AppConstants.ACCOUNTS_PAGE_HEADER_COUNT);
+
+	}
+
+	@Test(priority = 5)
+	public void accountHeaderValueTest() {
+		List<String> actualAccPageHeaderList = accPage.getAccountsPageHeaderList();
+		System.out.println("Account Page Headerlist" + actualAccPageHeaderList);
+		Assert.assertEquals(actualAccPageHeaderList, AppConstants.EXPECTED_ACCOUNTS_PAGE_HEADER_LIST);;
+
 	}
 
 }
