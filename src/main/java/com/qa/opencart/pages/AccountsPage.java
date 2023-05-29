@@ -24,6 +24,7 @@ public class AccountsPage {
 	private By logoutlink = By.linkText("Logout");
 	private By accountPageHeader = By.xpath("//div[@id ='content']/h2");
 	private By search = By.name("search");
+	private By searchBtn = By.cssSelector("#search button");
 
 	// 3 Page action
 	public String getAccountsPageTile() {
@@ -58,6 +59,16 @@ public class AccountsPage {
 		}
 		return accHeaderValueList;
 
+	}
+
+	public void getSearchProductCount() {
+
+	}
+
+	public SearchPage performSearch(String searchKey) {
+		eleUtil.doSendKeys(search, searchKey);
+		eleUtil.doClick(searchBtn);
+		return new SearchPage(driver);
 	}
 
 }

@@ -50,6 +50,9 @@ public class ElementUtil {
 	public List<WebElement> getElements(By locator) {
 		return driver.findElements(locator);
 	}
+	/*
+	 * first clear the field the do search
+	 */
 
 	public void doSendKeys(By locator, String value) {
 		WebElement element = getElement(locator);
