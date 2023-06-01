@@ -26,17 +26,17 @@ public class DriverFactory {
 	 * @return the driver
 	 */
 	public WebDriver initDriver(Properties prop) {
-	
+
 		optionManger = new OptionsManger(prop);
-		highlight=prop.getProperty("highlight").trim();
+		highlight = prop.getProperty("highlight").trim();
 		String browserName = prop.getProperty("browser").toLowerCase().trim();
 
 		System.out.println("browsre Name is :" + browserName);
 		if (browserName.equalsIgnoreCase("chrome")) {
 			// String path = System.getProperty("user. dir");
 
-			// System.setProperty("webdriver.chrome.driver",
-			// "G:\\NewPracticeworkspace\\POMPF_ECOM_ECART_APP\\DRIVERS\\chromedriver.exe");
+			 System.setProperty("webdriver.chrome.driver",
+			 "G:\\NewPracticeworkspace\\POMPF_ECOM_ECART_APP\\DRIVERS\\chromedriver.exe");
 
 			WebDriverManager.chromedriver().browserVersion("113.0.5672.93").setup();
 
