@@ -21,7 +21,7 @@ public class DriverFactory {
 
 	/**
 	 * this method is initialzing the browser on basis of browser name
-	 * 
+	 *
 	 * @parambrowserName
 	 * @return the driver
 	 */
@@ -50,14 +50,15 @@ public class DriverFactory {
 
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("url"));
+		//driver.get(prop.getProperty("url"));
+		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 		return driver;
 
 	}
 
 	/**
 	 * this method is reading the properties from .properties file
-	 * 
+	 *
 	 * @return
 	 */
 	public Properties initProp() {

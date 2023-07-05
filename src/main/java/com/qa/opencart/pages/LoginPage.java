@@ -21,6 +21,7 @@ public class LoginPage {
 	private By password = By.id("input-password");
 	private By loginButton = By.xpath("//input[@value='Login']");
 	private By forgotPassword = By.linkText("Forgotten Password");
+	private By registerLink = By.linkText("Register");
 
 	// 2 Page Constructor
 	// here driver is get initliase
@@ -76,6 +77,12 @@ public class LoginPage {
 		// Here it suggesting create AccountsPage class
 		// this is Test Driven Develpoment (TDD) approch
 		// to fullfull my test case whatever class or methods are require create it
+	}
+
+	public RegistrationPage navigateToRegisterPage() {
+		eleUtil.doClick(registerLink);
+		return new RegistrationPage(driver);
+
 	}
 
 }

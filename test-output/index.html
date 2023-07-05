@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--421849708\testng-customsuite.xml</span>
+                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse-1226279016\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.qa.opencart.tests.ProductPageInfoTest" class="method navigator-link" hash-for-method="addTocartTest">addTocartTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.qa.opencart.tests.RegistrationPageTest" class="method navigator-link" hash-for-method="userRegTest(rohit, sharma, 99887665544, rohit@1234, yes)">userRegTest(rohit, sharma, 99887665544, rohit@1234, yes)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.qa.opencart.tests.RegistrationPageTest" class="method navigator-link" hash-for-method="userRegTest(ravindra, jadeja, 9988888888, jaddu@88, yes)">userRegTest(ravindra, jadeja, 9988888888, jaddu@88, yes)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.qa.opencart.tests.RegistrationPageTest" class="method navigator-link" hash-for-method="userRegTest(virat, kohli, 9911771177, virat@18, no)">userRegTest(virat, kohli, 9911771177, virat@18, no)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +132,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qa.opencart.tests.ProductPageInfoTest</span>
+              <span class="class-name">com.qa.opencart.tests.RegistrationPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addTocartTest">
-                  </a> <!-- addTocartTest -->
-                  <span class="method-name">addTocartTest</span>
+                  <a name="userRegTest(rohit, sharma, 99887665544, rohit@1234, yes)">
+                  </a> <!-- userRegTest(rohit, sharma, 99887665544, rohit@1234, yes) -->
+                  <span class="method-name">userRegTest</span>
+                  <span class="parameters">(rohit, sharma, 99887665544, rohit@1234, yes)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userRegTest(ravindra, jadeja, 9988888888, jaddu@88, yes)">
+                  </a> <!-- userRegTest(ravindra, jadeja, 9988888888, jaddu@88, yes) -->
+                  <span class="method-name">userRegTest</span>
+                  <span class="parameters">(ravindra, jadeja, 9988888888, jaddu@88, yes)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userRegTest(virat, kohli, 9911771177, virat@18, no)">
+                  </a> <!-- userRegTest(virat, kohli, 9911771177, virat@18, no) -->
+                  <span class="method-name">userRegTest</span>
+                  <span class="parameters">(virat, kohli, 9911771177, virat@18, no)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +164,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--421849708\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse-1226279016\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +173,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.opencart.tests.ProductPageInfoTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;addTocartTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.qa.opencart.tests.ProductPageInfoTest --&gt;
+      &lt;class name=&quot;com.qa.opencart.tests.RegistrationPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,16 +213,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addTocartTest')
-data.setCell(0, 2, 'com.qa.opencart.tests.ProductPageInfoTest')
-data.setCell(0, 3, 7830);
+data.setCell(0, 1, 'userRegTest')
+data.setCell(0, 2, 'com.qa.opencart.tests.RegistrationPageTest')
+data.setCell(0, 3, 15140);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'userRegTest')
+data.setCell(1, 2, 'com.qa.opencart.tests.RegistrationPageTest')
+data.setCell(1, 3, 14675);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'userRegTest')
+data.setCell(2, 2, 'com.qa.opencart.tests.RegistrationPageTest')
+data.setCell(2, 3, 12863);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -214,18 +245,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.qa.opencart.tests.ProductPageInfoTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">productImageCountTest</span>
-                <br/>
-                <span class="ignored-method-name">getProdcutInfoTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -234,22 +256,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.opencart.tests.ProductPageInfoTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.opencart.tests.RegistrationPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">ProductInfoPageSetup</span>
-                <span class="method-start">33612 ms</span>
+                <span class="method-name">regPageSetUp</span>
+                <span class="method-start">15019 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">addTocartTest</span>
-                <span class="method-start">38510 ms</span>
+                <span class="method-name">userRegTest(rohit, sharma, 99887665544, rohit@1234, yes)</span>
+                <span class="method-start">19685 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">userRegTest(virat, kohli, 9911771177, virat@18, no)</span>
+                <span class="method-start">35126 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">userRegTest(ravindra, jadeja, 9988888888, jaddu@88, yes)</span>
+                <span class="method-start">50350 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">46770 ms</span>
+                <span class="method-start">63241 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
