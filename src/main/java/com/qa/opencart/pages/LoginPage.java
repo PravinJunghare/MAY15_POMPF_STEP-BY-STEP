@@ -7,6 +7,7 @@ import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.ElementUtil;
 
 import bsh.org.objectweb.asm.Constants;
+import io.qameta.allure.Step;
 
 public class LoginPage {
 
@@ -38,6 +39,7 @@ public class LoginPage {
 	// Here we are using private by locators in public method ie
 	// encapsulation concept
 
+	 @Step("Getting login page title")
 	public String getLoginPageTitle() {
 		String title = driver.getTitle();
 		// String title =
@@ -46,7 +48,7 @@ public class LoginPage {
 		System.out.println("Login Page Title is :" + title);
 		return title;
 	}
-
+	 @Step("Getting login page Url")
 	public String getLoginUrl() {
 		String url = driver.getCurrentUrl();
 		// String url = eleUtil.waitForURLIsAndFetch(AppConstants.DEFAULT_SHORT_TIMEOUT,
@@ -54,13 +56,13 @@ public class LoginPage {
 		return url;
 
 	}
-
+	 @Step("Checking forgot password link")
 	public boolean forgotPasswordLinkExits() {
 		// return driver.findElement(forgotPassword).isDisplayed();
 		return eleUtil.waitForElementVisible(forgotPassword, AppConstants.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 
 	}
-
+	 @Step("Login with username :{0} and password :{1}")
 	public AccountsPage doLogin(String un, String pwd) {
 		// driver.findElement(emailId).sendKeys(un);
 		// driver.findElement(password).sendKeys(pwd);
@@ -79,6 +81,8 @@ public class LoginPage {
 		// to fullfull my test case whatever class or methods are require create it
 	}
 
+
+     @Step("Navigate to registration page")
 	public RegistrationPage navigateToRegisterPage() {
 		eleUtil.doClick(registerLink);
 		return new RegistrationPage(driver);

@@ -88,18 +88,49 @@ public class DriverFactory {
 	 * @return
 	 */
 	public Properties initProp() {
-		prop = new Properties();
 
-		try {
-			FileInputStream ip = new FileInputStream("src\\test\\resources\\config\\config.properties");
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		// maven clean install -Denv="qa";
+		FileInputStream ip = null ;
+		prop = new Properties();
+     String envName= System.getProperty("env");
+     System.out.println("Running on : "+envName);
+
+     try {
+     if(envName==null)
+
+     {
+    	 System.out.println("No environment is passed....Running on test env");
+    	  ip = new FileInputStream(".src/test/resources/config/qa.config.properties");
+     }
+
+     else {
+		switch (envName.toLowerCase().trim()) {
+		case "qa":
+			 ip = new FileInputStream(".src/test/resources/config/qa.config.properties");
+			break;
+		case "dev":
+		     ip = new FileInputStream(".src/test/resources/config/dev.config.properties");
+			break;
+		case "prod":
+			 ip = new FileInputStream(".src/test/resources/config/prod.config.properties");
+			break;
+		default:
+			System.out.println("Wrong en no test casw will run");
+			break;
 		}
+	}
+     }
+catch (Exception e) {
+	// TODO: handle exception
+}
+
+     try {
+		prop.load(ip);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
 		return prop;
 	}
 
