@@ -38,7 +38,7 @@ public class LoginPage {
 	// encapsulation concept
 
 	public String getLoginPageTitle() {
-		 String title = driver.getTitle();
+		String title = driver.getTitle();
 		// String title =
 		// eleUtil.waitForTitleContainsAndFetch(AppConstants.DEFAULT_SHORT_TIMEOUT,
 		// AppConstants.LOGIN_PAGE_TITLE_VALUE);
@@ -47,9 +47,9 @@ public class LoginPage {
 	}
 
 	public String getLoginUrl() {
-		// String url = driver.getCurrentUrl();
-		String url = eleUtil.waitForURLIsAndFetch(AppConstants.DEFAULT_SHORT_TIMEOUT,
-				AppConstants.LOGIN_PAGE_URL_FRICTION_VALUE);
+		String url = driver.getCurrentUrl();
+		// String url = eleUtil.waitForURLIsAndFetch(AppConstants.DEFAULT_SHORT_TIMEOUT,
+		// AppConstants.LOGIN_PAGE_URL_FRICTION_VALUE);
 		return url;
 
 	}
@@ -64,6 +64,7 @@ public class LoginPage {
 		// driver.findElement(emailId).sendKeys(un);
 		// driver.findElement(password).sendKeys(pwd);
 		// driver.findElement(loginButton).click();
+		System.out.println("App creds are  " + un +  ":"  + pwd);
 		eleUtil.waitForElementVisible(emailId, AppConstants.DEFAULT_MEDIUM_TIMEOUT).sendKeys(un);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginButton);

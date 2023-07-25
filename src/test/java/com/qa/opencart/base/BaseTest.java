@@ -1,5 +1,7 @@
 package com.qa.opencart.base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -9,22 +11,27 @@ import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
 
 public class BaseTest {
-	// here we need to do init browser enter url so will have to call initDriver
-	// method in
-	// Driverfactory class so created object
-	// do not inherit it becase it not a parnet class of BaseTest class
-	// as initDriver returning driver so we created the Webdriver driver to store
-	// driver refrence
+	/**
+	 * here we need to do init browser enter url so will have to call init Driver
+	 * method inDriverfactory class so created object do not inherit it becase it
+	 * not a parnet class of BaseTest class as initDriver returning driver so we
+	 * created the Webdriver driver to store driver refrence
+	 **/
+
 	DriverFactory df;
 	WebDriver driver;
 
-	// only access to child class in same or diffret packages
-	protected LoginPage loginPage;
-	protected  AccountsPage accPage;
 
-	@BeforeTest public void setup() {
+	// only access to child class in same or diffret packages
+	protected Properties prop;
+	protected LoginPage loginPage;
+	protected AccountsPage accPage;
+
+	@BeforeTest
+	public void setup() {
 		df = new DriverFactory();
-		driver = df.initDriver("chrome");
+		prop = df.initProp();
+		driver = df.initDriver(prop);
 		loginPage = new LoginPage(driver);
 	}
 

@@ -29,7 +29,7 @@ public class LoginPageTest extends BaseTest {
 
 	@Test(priority = 4)
 	public void dologinTest() {
-		accPage = loginPage.doLogin("pravinjunghare01@gmail.com", "Test@12345");
+		accPage = loginPage.doLogin(prop.getProperty("username").trim(),prop.getProperty("password").trim());
 		Assert.assertTrue(accPage.isLogoutLinkExists());
 
 		// after login we are moving to account page so accPage where we can store
