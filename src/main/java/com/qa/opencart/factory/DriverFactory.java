@@ -9,6 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
+	public static String highlight;
 	public WebDriver driver;
 
 	public WebDriver initDriver(String browserName) {
