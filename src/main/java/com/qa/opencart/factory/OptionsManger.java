@@ -27,7 +27,6 @@ public class OptionsManger {
 			co.addArguments("--incognito");
 		}
 
-
 		return co;
 	}
 

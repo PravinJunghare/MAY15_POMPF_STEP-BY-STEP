@@ -19,6 +19,6 @@ public class AppConstants {
 			"My Affiliate Account", "Newsletter");
 	public static final String USER_REG_SUCCESS_MESS = "Your Account Has Been Created";
 
-	//******************** SHEET NAMES **************************
+	// ******************** SHEET NAMES **************************
 	public static final String REGISTER_SHEET_NAME = "register";
 }
