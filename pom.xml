@@ -16,6 +16,10 @@
         <aspectj.version>1.8.4</aspectj.version>
         <extentreports-version>5.0.8</extentreports-version>
      <aspectj.version>1.9.5</aspectj.version>
+  
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+
 	</properties>
 	
 	
@@ -110,6 +114,8 @@
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports-version}</version>
 		</dependency>
+		
+		<dependency>     <groupId>com.apple</groupId>     <artifactId>AppleJavaExtensions</artifactId>     <version>1.4</version> </dependency>
 		
 		
 		<dependency>

@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+    <listener class-name="com.qa.opencart.listeners.AnnotationTransformer"/>
   </listeners>
   <test thread-count="4" parallel="tests" name="Login Page Test_chrome_90.0(failed)" verbose="4">
     <parameter name="browser" value="chrome"/>
@@ -14,8 +15,6 @@
         <methods>
           <include name="setup"/>
           <include name="verifyLoginPageTilteTest"/>
-          <include name="dologinTest"/>
-          <include name="forgotPasswordlinkExistTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
